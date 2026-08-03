@@ -1,0 +1,20 @@
+{
+ "doctype": "DocType",
+ "name": "Test Workflow Step",
+ "module": "AI Test Suite",
+ "istable": 1,
+ "custom": 0,
+ "fields": [
+  {"fieldname": "step_name", "label": "Step Name", "fieldtype": "Data", "reqd": 1, "in_list_view": 1},
+  {"fieldname": "reference_doctype", "label": "Reference DocType", "fieldtype": "Link", "options": "DocType", "reqd": 1, "in_list_view": 1},
+  {"fieldname": "action", "label": "Action", "fieldtype": "Select",
+   "options": "Create\nUpdate\nSubmit\nCancel\nDelete\nCustom Method\nAPI Call", "reqd": 1, "in_list_view": 1},
+  {"fieldname": "custom_method", "label": "Custom Method (dotted path)", "fieldtype": "Data",
+   "depends_on": "eval:doc.action=='Custom Method'"},
+  {"fieldname": "applicable_levels", "label": "Applicable Levels (comma separated)", "fieldtype": "Small Text",
+   "default": "Functional,UI,Technical", "in_list_view": 1},
+  {"fieldname": "expected_result", "label": "Expected Result", "fieldtype": "Small Text"},
+  {"fieldname": "test_script", "label": "Custom Test Script (Python)", "fieldtype": "Code", "options": "Python",
+   "description": "Optional. Must set local variables 'result' (Pass/Fail/Warning) and 'message'. `frappe` and `step` are available."}
+ ]
+}

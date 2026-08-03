@@ -1,0 +1,20 @@
+{
+ "doctype": "DocType",
+ "name": "AI Test Settings",
+ "module": "AI Test Suite",
+ "issingle": 1,
+ "custom": 0,
+ "fields": [
+  {"fieldname": "enable_ai_suggestions", "label": "Enable AI Suggestions", "fieldtype": "Check", "default": "1"},
+  {"fieldname": "ai_provider", "label": "AI Provider", "fieldtype": "Select", "options": "OpenAI\nAnthropic\nNone", "default": "OpenAI"},
+  {"fieldname": "api_key", "label": "API Key", "fieldtype": "Password"},
+  {"fieldname": "model_name", "label": "Model Name", "fieldtype": "Data", "default": "gpt-4o-mini"},
+  {"fieldname": "column_break_1", "fieldtype": "Column Break"},
+  {"fieldname": "default_export_format", "label": "Default Export Format", "fieldtype": "Select", "options": "PDF\nExcel", "default": "PDF"},
+  {"fieldname": "ui_test_runner_url", "label": "UI Test Runner Webhook URL", "fieldtype": "Data",
+   "description": "Endpoint of an external Playwright/Selenium/Cypress runner service that accepts {doctype, action, expected_result} and returns {passed, message}."}
+ ],
+ "permissions": [
+  {"role": "System Manager", "read": 1, "write": 1}
+ ]
+}

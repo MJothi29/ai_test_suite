@@ -1,0 +1,21 @@
+{
+ "doctype": "DocType",
+ "name": "Test Workflow",
+ "module": "AI Test Suite",
+ "custom": 0,
+ "autoname": "field:workflow_name",
+ "fields": [
+  {"fieldname": "workflow_name", "label": "Workflow Name", "fieldtype": "Data", "reqd": 1, "unique": 1, "in_list_view": 1},
+  {"fieldname": "workflow_type", "label": "Workflow Type", "fieldtype": "Select",
+   "options": "Module-wise\nDocType Chain", "reqd": 1, "in_list_view": 1},
+  {"fieldname": "module", "label": "Module", "fieldtype": "Link", "options": "Module Def",
+   "depends_on": "eval:doc.workflow_type=='Module-wise'", "in_list_view": 1},
+  {"fieldname": "disabled", "label": "Disabled", "fieldtype": "Check"},
+  {"fieldname": "description", "label": "Description", "fieldtype": "Small Text"},
+  {"fieldname": "steps_section", "fieldtype": "Section Break", "label": "Workflow Steps (e.g. Lead -> Opportunity -> Quotation -> Sales Order)"},
+  {"fieldname": "steps", "label": "Steps", "fieldtype": "Table", "options": "Test Workflow Step"}
+ ],
+ "permissions": [
+  {"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1}
+ ]
+}

@@ -1,0 +1,2 @@
+include *.txt
+recursive-include ai_test_suite *.json *.html *.js *.css *.md

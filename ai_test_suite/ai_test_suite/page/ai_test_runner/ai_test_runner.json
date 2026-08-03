@@ -1,0 +1,9 @@
+{
+ "doctype": "Page",
+ "name": "ai-test-runner",
+ "module": "AI Test Suite",
+ "title": "AI Test Runner",
+ "page_name": "ai-test-runner",
+ "standard": "Yes",
+ "system_page": 0
+}

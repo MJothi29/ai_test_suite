@@ -1,0 +1,18 @@
+{
+ "doctype": "DocType",
+ "name": "Test Execution Result",
+ "module": "AI Test Suite",
+ "istable": 1,
+ "custom": 0,
+ "fields": [
+  {"fieldname": "step_name", "label": "Step", "fieldtype": "Data", "in_list_view": 1},
+  {"fieldname": "reference_doctype", "label": "DocType", "fieldtype": "Data", "in_list_view": 1},
+  {"fieldname": "test_level", "label": "Level", "fieldtype": "Data", "in_list_view": 1},
+  {"fieldname": "status", "label": "Status", "fieldtype": "Select", "options": "Pass\nFail\nWarning\nSkipped", "in_list_view": 1},
+  {"fieldname": "message", "label": "Message", "fieldtype": "Small Text", "in_list_view": 1},
+  {"fieldname": "error_log", "label": "Error / Stack Trace", "fieldtype": "Code", "options": "Text"},
+  {"fieldname": "root_cause", "label": "Root Cause", "fieldtype": "Small Text"},
+  {"fieldname": "ai_suggestion", "label": "AI Suggestion", "fieldtype": "Small Text"},
+  {"fieldname": "execution_time", "label": "Time (s)", "fieldtype": "Float"}
+ ]
+}

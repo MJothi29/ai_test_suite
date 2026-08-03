@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: ai_test_suite
+Version: 0.0.1
+Summary: AI Test Suite for Frappe ERPNext
+Author: Nalam Hospital
+Author-email: MJothi29 <your-email@example.com>
+License: MIT
+Project-URL: Homepage, https://github.com/MJothi29/ai_test_suite
+Project-URL: Repository, https://github.com/MJothi29/ai_test_suite
+Keywords: frappe,erpnext,testing,automation,ai
+Classifier: Programming Language :: Python :: 3
+Classifier: Framework :: Frappe
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Dynamic: author

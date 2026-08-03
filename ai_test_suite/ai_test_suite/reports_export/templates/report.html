@@ -1,0 +1,39 @@
+<h2>AI Test Suite - Execution Report</h2>
+<p>
+	<b>Execution:</b> {{ doc.name }}<br>
+	<b>Workflow:</b> {{ doc.workflow }}<br>
+	<b>Levels Tested:</b> {{ doc.levels_tested }}<br>
+	<b>Executed By:</b> {{ doc.executed_by }}<br>
+	<b>Start:</b> {{ doc.start_time }} &nbsp; <b>End:</b> {{ doc.end_time }}<br>
+	<b>Status:</b> {{ doc.status }}
+</p>
+<h3>Summary</h3>
+<table border="1" cellpadding="4" cellspacing="0" style="border-collapse: collapse; width: 60%;">
+	<tr><th>Total</th><th>Passed</th><th>Failed</th><th>Warnings</th></tr>
+	<tr>
+		<td>{{ doc.total_tests }}</td>
+		<td>{{ doc.passed }}</td>
+		<td>{{ doc.failed }}</td>
+		<td>{{ doc.warnings }}</td>
+	</tr>
+</table>
+
+<h3>Detailed Results</h3>
+<table border="1" cellpadding="4" cellspacing="0" style="border-collapse: collapse; width: 100%; font-size: 11px;">
+	<tr>
+		<th>Step</th><th>DocType</th><th>Level</th><th>Status</th>
+		<th>Message</th><th>Root Cause</th><th>AI Suggestion</th><th>Time (s)</th>
+	</tr>
+	{% for r in doc.results %}
+	<tr>
+		<td>{{ r.step_name }}</td>
+		<td>{{ r.reference_doctype }}</td>
+		<td>{{ r.test_level }}</td>
+		<td>{{ r.status }}</td>
+		<td>{{ r.message }}</td>
+		<td>{{ r.root_cause }}</td>
+		<td>{{ r.ai_suggestion }}</td>
+		<td>{{ r.execution_time }}</td>
+	</tr>
+	{% endfor %}
+</table>
